@@ -20,30 +20,11 @@
       <![endif]-->
 
       <!-- Site content -->
-      <div class="portal-wrapper">
-        <div class="portal">
+      <!-- Render the app.js -->
+      <!-- Content injected. -->
+      <div ng-view=""></div>
 
-        </div>
-      </div>  
-
-      <div class="header">
-        <div class="navbar nav-justified navbar-inverse navbar-static-top" ng-controller="NavbarCtrl">
-          <div collapse="isCollapsed" class="navbar-collapse collapse" id="navbar-main">
-            <ul class="nav navbar-nav">
-              <li ng-repeat="item in menu" ng-class="{active: isActive(item.link)}">
-                <a ng-href="{{item.link}}">{{item.title}}</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-
-        <!-- Render the app.js -->
-        <div ng-view=""></div>
-
-        <div class="footer"></div>
-      </div>
+      <div class="footer"></div>
 
       <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
       <script>
@@ -91,6 +72,8 @@
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
     <script src="components/navbar/navbar.controller.js"></script>
+    <script src="components/portal/portal.controller.js">
+      </script>
     <script src="scripts/controllers/main.js"></script>
     <script src="scripts/controllers/about.js"></script>
     <!-- endbuild -->

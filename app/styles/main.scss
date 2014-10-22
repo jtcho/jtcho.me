@@ -4,12 +4,27 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // endbower
 
 @font-face {
-  font-family: avenirLight;
-  src: url('/fonts/avenir_light.ttf');
+  font-family: "avenirLight";
+  src: url('/fonts/avenir_light.eot');
+  font-weight:normal;
+  font-style:normal;
 }
 
 html, body {
   background-image:url('/images/background_tile.png');
+}
+
+.container-fluid {
+  padding: 0;
+  width: 100%;
+}
+
+.row {
+  margin: 0;
+  height: 500px;
+  width: 100%;
+  display: block;
+  position: relative;
 }
 
 .portal-wrapper {
@@ -25,13 +40,19 @@ html, body {
 .navbar {
   border-bottom: 0;
   min-height: 100px;
+  display: none;
 }
 
 .nav {
   text-align:center;
   height: auto;
+  font-family: "avenirLight", sans-serif;
+  font-size:1.3em;
+  color: #FFFFFF;
+  letter-spacing: 1px;
 }
 
+//
 .navbar-nav{
     margin: 0 auto;
     display: table;
@@ -41,12 +62,38 @@ html, body {
     padding-bottom: 20px;
 }
 
+.navbar-nav > li {
+  margin-left: 18px;
+  margin-right: 18px;
+}
+
 .navbar-brand {
   line-height: 100px;
   height: auto;
 }
 
+.altcolor {
+  background-color: #38556b;
+}
+
+#row_separator {
+  // margin:-20px;
+  height: 3px;
+  width: 100%;
+  background-color: #f8953f;
+  display:none;
+  top:-20px;
+  position:relative;
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
-  
+
+  #row_separator {
+    display:block;
+  }
+
+  .navbar {
+    display:block;
+  }
 }

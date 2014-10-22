@@ -6,6 +6,7 @@ $scope.menu = [
 {
 'title': 'portfolio',
 'link': '#'
+},
 {
 'title': 'resume',
 'link': '#'
