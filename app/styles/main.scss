@@ -1,0 +1,52 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+@font-face {
+  font-family: avenirLight;
+  src: url('/fonts/avenir_light.ttf');
+}
+
+html, body {
+  background-image:url('/images/background_tile.png');
+}
+
+.portal-wrapper {
+  width: 100%;
+}
+
+//A window to another dimension...
+.portal {
+  background-color: #f8993d;
+  padding-top:20.83% //Force a 1920:400 aspect ratio.
+}
+
+.navbar {
+  border-bottom: 0;
+  min-height: 100px;
+}
+
+.nav {
+  text-align:center;
+  height: auto;
+}
+
+.navbar-nav{
+    margin: 0 auto;
+    display: table;
+    table-layout: fixed;
+    float:none;
+    padding-top: 25px;
+    padding-bottom: 20px;
+}
+
+.navbar-brand {
+  line-height: 100px;
+  height: auto;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  
+}
