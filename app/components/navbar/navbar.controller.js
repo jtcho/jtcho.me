@@ -4,15 +4,19 @@ angular.module('jtchoApp')
 .controller('NavbarCtrl', function ($scope, $location) {
 $scope.menu = [
 {
-'title': 'portfolio',
-'link': '#'
-},
-{
-'title': 'resume',
+'title': 'projects',
 'link': '#'
 },
 {
 'title': 'about',
+'link': '#'
+},
+{
+  'title': 'skills',
+  'link': '#'
+},
+{
+'title': 'resume',
 'link': '#'
 },
 {

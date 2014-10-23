@@ -14,6 +14,11 @@ html, body {
   background-image:url('/images/background_tile.png');
 }
 
+h1 {
+  color:#FFFFFF;
+  letter-spacing: 3px;
+}
+
 .container-fluid {
   padding: 0;
   width: 100%;
@@ -41,6 +46,7 @@ html, body {
   border-bottom: 0;
   min-height: 100px;
   display: none;
+  margin-bottom:0;
 }
 
 .nav {
@@ -59,7 +65,6 @@ html, body {
     table-layout: fixed;
     float:none;
     padding-top: 25px;
-    padding-bottom: 20px;
 }
 
 .navbar-nav > li {
@@ -77,12 +82,10 @@ html, body {
 }
 
 #row_separator {
-  // margin:-20px;
   height: 3px;
   width: 100%;
   background-color: #f8953f;
   display:none;
-  top:-20px;
   position:relative;
 }
 
