@@ -14,9 +14,17 @@ html, body {
   background-image:url('/images/background_tile.png');
 }
 
-h1 {
-  color:#FFFFFF;
-  letter-spacing: 3px;
+h1, h2 {
+  color:#ffffff;
+  letter-spacing: 0px;
+}
+
+p {
+  color: #b3b3b3;
+}
+
+a {
+  color: #ffffff;
 }
 
 .container-fluid {
@@ -81,6 +89,23 @@ h1 {
   background-color: #38556b;
 }
 
+.footer {
+  padding: 30px 0;
+  background-color:#38556b;
+  border-top: 3px solid #f8953f;
+  color:#ffffff;
+}
+
+.footer_badge {
+  width:40px;
+  opacity:0.7;
+  margin: 0 10px;
+}
+
+.footer_badge:hover {
+  opacity:1.0;
+}
+
 #row_separator {
   height: 3px;
   width: 100%;
@@ -89,11 +114,41 @@ h1 {
   position:relative;
 }
 
+#jtsprite {
+  background-image:url('/images/jtsprite.gif');
+  height:350px;
+  width:231px;
+  display:none;
+  margin-right: 5%;
+  top: -120px;
+  position:relative;
+  vertical-align:middle; 
+}
+
+#bio-wrapper {
+  text-align:center;
+}
+
+.bio {
+  display:inline-block;
+  position:relative;
+  width: 500px;
+  top:50px;
+}
+
+.bio-blurb {
+  display:inline-block;
+}
+
 /* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
+@media (min-width: 820px) {
 
   #row_separator {
     display:block;
+  }
+
+  #jtsprite {
+    display:inline-block;
   }
 
   .navbar {

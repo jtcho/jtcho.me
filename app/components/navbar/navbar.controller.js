@@ -12,8 +12,8 @@ $scope.menu = [
 'link': '#'
 },
 {
-  'title': 'skills',
-  'link': '#'
+'title': 'skills',
+'link': '#'
 },
 {
 'title': 'resume',
@@ -21,7 +21,7 @@ $scope.menu = [
 },
 {
 'title': 'contact',
-'link': '#'
+'link': 'mailto:jonathan.t.cho@gmail.com'
 }
 ];
 
