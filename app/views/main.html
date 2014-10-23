@@ -24,11 +24,12 @@
   <div class="bio text-left">
     <h2> Howdy! Welcome to my part of town. </h2><br>
     <p class="bio-blurb">
-      I am a programmer and (sometimes) designer who likes to make stuff! Lots of stuff.<br><br>
-      I'm currently studying at the <a href="#">University of Pennsylvania</a>, majoring in Computer Science and minoring in Statistics/Nanotechnology.
-      In the past, I've done some research at Penn State (oh the irony!) working in the Hughes Lab.<br><br>
-      I started off studying Bioengineering, but I realized along the way that I enjoyed Computer Science too much to not major in it! I've also discovered a growing passion for pure Mathematics and Probability Theory.<br><br>
-      I'm now searching for new ways to apply my interests, particularly real-world applications of statistical analysis!
+      I am a programmer and designer who likes to make stuff! Lots of stuff.<br><br>
+      I'm currently studying at the <a href="http://www.upenn.edu/">University of Pennsylvania</a>, majoring in Computer Science and minoring in Statistics/Nanotechnology.
+      In the past, I've done some research at Penn State (oh the irony!) working in the <a href="www.hugheslab.com">Hughes Lab</a>.<br><br>
+      I started off studying Bioengineering, but I realized along the way that I enjoyed Computer Science too much to not major in it! I still entertain a large interest in the medical field, however. I've also discovered a growing passion for pure Mathematics and Probability Theory.<br><br>
+      I'm now searching for new ways to apply my interests, particularly real-world applications of statistical analysis!<br><br>
+      I also like to sing and do voiceover work! If you're so inclined, check out my cover(s).
     </p>
   </div>
   </div>
@@ -37,9 +38,17 @@
 <div class="container-fluid">
 
   <!--SKILLS-->
-  <div class="row text-center" id="skills">
+  <div class="row text-center" id="skills" ng-controller="SkillCtrl">
     <br>
     <h1>skills</h1>
+    <br><br>
+    <div class="chart-wrapper">
+    	<skill-chart chart-data="skillData"></skill-chart>
+    </div>
+    <div class="chart-gap"></div>
+    <div class="chart-wrapper">
+    	<skill-chart chart-data="skillData"></skill-chart>
+    </div>
   </div>
 
 </div>

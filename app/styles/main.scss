@@ -12,6 +12,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 html, body {
   background-image:url('/images/background_tile.png');
+  background-attachment: fixed;
 }
 
 h1, h2 {
@@ -50,6 +51,8 @@ a {
   padding-top:20.83% //Force a 1920:400 aspect ratio.
 }
 
+//navbar stuff
+
 .navbar {
   border-bottom: 0;
   min-height: 100px;
@@ -66,7 +69,6 @@ a {
   letter-spacing: 1px;
 }
 
-//
 .navbar-nav{
     margin: 0 auto;
     display: table;
@@ -85,9 +87,13 @@ a {
   height: auto;
 }
 
+//row div stuff
+
 .altcolor {
   background-color: #38556b;
 }
+
+//footer stuff
 
 .footer {
   padding: 30px 0;
@@ -120,13 +126,15 @@ a {
   width:231px;
   display:none;
   margin-right: 5%;
-  top: -120px;
+  top: -150px;
   position:relative;
   vertical-align:middle; 
 }
 
 #bio-wrapper {
   text-align:center;
+  position:Relative;
+  top:-25px;
 }
 
 .bio {
@@ -138,6 +146,43 @@ a {
 
 .bio-blurb {
   display:inline-block;
+}
+
+.chart-wrapper {
+	width: 20%;
+	margin: 0 auto;
+	display: inline-block;
+}
+
+.chart-gap {
+	width: 5%;
+	display: inline-block;
+}
+
+.chart {
+    padding: 3px;
+}
+
+.chart div {
+  width: 0;
+  height: 30px;
+  transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -webkit-transition: all 1s ease-out;
+}
+
+.chart div {
+  font: 10px sans-serif;
+  background-color: #f8953f;
+  text-align: right;
+  padding: 3px;
+  margin: 10px;
+  color: white;
+  box-shadow: 2px 2px 2px #c97022;
+}
+
+.chart div:hover {
+	background-color:#fe5308;
 }
 
 /* Responsive: Portrait tablets and up */
