@@ -1,9 +1,10 @@
 node_modules
-dist
+public
 .tmp
 .sass-cache
-bower_components
-jtcho.sublime-project
-jtcho.sublime-workspace
+.idea
+client/bower_components
+dist
+/server/config/local.env.js
 *.DS_Store
 *.psd

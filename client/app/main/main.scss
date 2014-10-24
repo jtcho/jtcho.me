@@ -1,0 +1,213 @@
+@font-face {
+  font-family: "avenirLight";
+  src: url('/fonts/avenir_light.eot');
+  font-weight:normal;
+  font-style:normal;
+}
+
+//general styling
+
+html, body {
+  background-image:url('/assets/images/background_tile.png');
+  background-attachment: fixed;
+}
+
+h1, h2 {
+  color:#ffffff;
+  letter-spacing: 0px;
+}s
+
+p {
+  color: #b3b3b3;
+}
+
+a, a:hover {
+  color: #f5d18e;
+}
+
+.container-fluid {
+  padding: 0;
+  width: 100%;
+}
+
+.row {
+  margin: 0;
+  height: 500px;
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+.portal-wrapper {
+  width: 100%;
+}
+
+//A window to another dimension...
+.portal {
+  background-color: #f8993d;
+  padding-top:20.83%; //Force a 1920:400 aspect ratio.
+  background-image:url('/assets/images/day1.gif');
+  background-size:cover;
+}
+
+//navbar stuff
+
+.navbar {
+  border-bottom: 0;
+  min-height: 100px;
+  display: none;
+  margin-bottom:0;
+}
+
+.nav {
+  text-align:center;
+  height: auto;
+  font-family: "avenirLight", sans-serif;
+  font-size:1.3em;
+  color: #FFFFFF;
+  letter-spacing: 1px;
+}
+
+.navbar-nav{
+    margin: 0 auto;
+    display: table;
+    table-layout: fixed;
+    float:none;
+    padding-top: 25px;
+}
+
+.navbar-nav > li {
+  margin-left: 18px;
+  margin-right: 18px;
+}
+
+.navbar-brand {
+  line-height: 100px;
+  height: auto;
+}
+
+//row div stuff
+
+.altcolor {
+  background-color: #38556b;
+}
+
+//footer stuff
+
+.footer {
+  padding: 30px 0;
+  background-color:#38556b;
+  border-top: 3px solid #f8953f;
+  color:#ffffff;
+}
+
+.footer_badge {
+  width:40px;
+  opacity:0.7;
+  margin: 0 10px;
+}
+
+.footer_badge:hover {
+  opacity:1.0;
+}
+
+#row_separator {
+  height: 3px;
+  width: 100%;
+  background-color: #f8953f;
+  display:none;
+  position:relative;
+}
+
+#jtsprite {
+  background-image:url('/assets/images/jtsprite.gif');
+  height:350px;
+  width:231px;
+  display:none;
+  margin-right: 5%;
+  top: -150px;
+  position:relative;
+  vertical-align:middle; 
+}
+
+#bio-wrapper {
+  text-align:center;
+  position:relative;
+  top:-25px;
+}
+
+.bio {
+  display:inline-block;
+  position:relative;
+  width: 500px;
+  top:50px;
+  color: #fff;
+}
+
+.bio-blurb {
+  display:inline-block;
+}
+
+#skills {
+    height: 600px;
+}
+
+.chart {
+    display:inline-block;
+}
+
+#programs, #apis {
+    display: none;
+}
+
+.axis {
+    fill: #fff;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke-width: 2px;
+    stroke-rendering: crispEdges;
+    stroke: #e26b04;
+}
+
+.project_square {
+    width: 200px;
+    height: 200px;
+}
+
+//Portrait tablets and wider.
+@media (min-width: 820px) {
+
+  #row_separator {
+    display:block;
+  }
+
+  #jtsprite {
+    display:inline-block;
+  }
+
+  .navbar {
+    display:block;
+  }
+
+}
+
+//Hide the Programs skill chart at screen widths less than 900.
+@media (min-width: 900px) {
+
+  #programs {
+    display: inline-block;
+  }
+
+}
+
+//Hide the API skill chart at screen widths less than 1300.
+@media (min-width: 1300px) {
+
+  #apis {
+    display: inline-block;
+  }
+
+}
