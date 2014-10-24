@@ -9,7 +9,7 @@
   <!--PROJECTS-->
   <div class="row text-center" id="projects">
     <br>
-    <h1>projects</h1>
+    <h1>PROJECTS</h1>
   </div>
 
 </div>
@@ -40,9 +40,11 @@
   <!--SKILLS-->
   <div class="row text-center" id="skills" ng-controller="SkillCtrl">
     <br>
-    <h1>skills</h1>
+    <h1>SKILLS</h1>
     <br><br>
-    <skill-chart chart-data="skillData"></skill-chart>
+    <div class="chart" id="programs" skill-chart chart-data="programData" mapper="mapperData" title="Programs"></div>
+    <div class="chart" id="languages" skill-chart chart-data="langData" mapper="mapperData" title="Languages"></div>
+    <div class="chart" id="apis" skill-chart chart-data="apiData" mapper="mapperData" title="APIs"></div>
   </div>
 
 </div>

@@ -24,7 +24,7 @@ p {
   color: #b3b3b3;
 }
 
-a {
+a, a:hover {
   color: #ffffff;
 }
 
@@ -148,38 +148,29 @@ a {
   display:inline-block;
 }
 
+#skills {
+	height: 600px;
+}
+
 .chart {
-	color: #ffffff;
 	display:inline-block;
 }
 
-.chart div {
-  width: 0;
-  height: 30px;
-  transition: all 1s ease-out;
-  -moz-transition: all 1s ease-out;
-  -webkit-transition: all 1s ease-out;
-}
-
-.chart div {
-  font: 10px sans-serif;
-  background-color: #f8953f;
-  text-align: right;
-  padding: 3px;
-  margin: 10px;
-  color: white;
-  box-shadow: 2px 2px 2px #c97022;
+#programs, #apis {
+	display: none;
 }
 
 .axis {
-	color: #ffffff;
+	fill: #fff;
 }
 
 .axis path,
 .axis line {
-  stroke: #fff;
+	fill: none;
+	stroke-width: 2px;
+	stroke-rendering: crispEdges;
+ 	stroke: #e26b04;
 }
-
 
 /* Responsive: Portrait tablets and up */
 @media (min-width: 820px) {
@@ -195,4 +186,22 @@ a {
   .navbar {
     display:block;
   }
+
 }
+
+@media (min-width: 900px) {
+
+  #programs {
+  	display: inline-block;
+  }
+
+}
+
+@media (min-width: 1300px) {
+
+  #apis {
+  	display: inline-block;
+  }
+
+}
+
