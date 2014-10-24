@@ -7,6 +7,7 @@ angular.module('jtchoApp')
 		return {
 			restrict: 'A',	//restrict to attribute use
 			scope: {data: '=chartData', tickMapper: '=mapper'},
+			//attrs is used for attributes added in the tags
 			link: function(scope, element, attrs) {
 				var d3 = $window.d3;
 				
@@ -58,7 +59,6 @@ angular.module('jtchoApp')
 					return margin.left + 20;
 				})
 				.attr('y', function(d, i) {
-					console.log(d.skill + ', ' + i);
 					return margin.top + (height/scope.data.length - barPadding)/2 + 
 					barPadding/2 + (i * height/scope.data.length);
 				});
@@ -111,7 +111,6 @@ angular.module('jtchoApp')
 				//eyecandy animations on mouse hovers
 				container.selectAll('rect')
 				.on('mouseover', function () {
-					console.log('hi');
 					d3.select(this).transition()
 					.attr('fill', '#fe5308')
 					.attr('opacity', 1)
