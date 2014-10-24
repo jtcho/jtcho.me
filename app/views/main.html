@@ -1,8 +1,8 @@
 <!-- INCLUDE Portal -->
-<div ng-include="'components/portal/portal.html'"></div>
+<div ng-include="'views/portal.html'"></div>
 
 <!-- INCLUDE Navbar -->
-<div ng-include="'components/navbar/navbar.html'"></div>
+<div ng-include="'views/navbar.html'"></div>
 
 <div class="container-fluid">
 
@@ -13,8 +13,6 @@
   </div>
 
 </div>
-
-<!-- <div id="row_separator"></div> -->
 
 <!--ABOUT-->
 <div class="row altcolor" id="about">
@@ -42,9 +40,11 @@
     <br>
     <h1>SKILLS</h1>
     <br><br>
-    <div class="chart" id="programs" skill-chart chart-data="programData" mapper="mapperData" title="Programs"></div>
-    <div class="chart" id="languages" skill-chart chart-data="langData" mapper="mapperData" title="Languages"></div>
-    <div class="chart" id="apis" skill-chart chart-data="apiData" mapper="mapperData" title="APIs"></div>
+    <div class="chart" id="programs" skill-chart chart-data="programData" 
+    	mapper="mapperData" chart-title="Programs"></div>
+    <div class="chart" id="languages" skill-chart chart-data="langData" 
+    	mapper="mapperData" chart-title="Languages"></div>
+    <div class="chart" id="apis" skill-chart chart-data="apiData" mapper="mapperData" chart-title="APIs"></div>
   </div>
 
 </div>
@@ -58,8 +58,9 @@
     <a href="https://angularjs.org/">
       <img class="footer_badge" src="images/badge_angular.png" alt="Built with Angular!">
     </a>
+
     <a href="http://nodejs.org/">
-      <img class="footer_badge" src="images/badge_node.png" alt="Run on Node!"
+      <img class="footer_badge" src="images/badge_node.png" alt="Run on Node!">
     </a>
   </div>
 </footer>

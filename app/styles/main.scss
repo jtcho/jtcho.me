@@ -48,7 +48,9 @@ a, a:hover {
 //A window to another dimension...
 .portal {
   background-color: #f8993d;
-  padding-top:20.83% //Force a 1920:400 aspect ratio.
+  padding-top:20.83%; //Force a 1920:400 aspect ratio.
+  background-image:url('/images/day1.gif');
+  background-size:cover;
 }
 
 //navbar stuff

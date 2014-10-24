@@ -71,7 +71,7 @@ angular.module('jtchoApp')
 					.attr('y', 30)
 					.attr('fill', '#f8953f')
 					.attr('text-anchor', 'middle')
-					.text(attrs.title);
+					.text(attrs.chartTitle);
 
 
 				//set up axes
