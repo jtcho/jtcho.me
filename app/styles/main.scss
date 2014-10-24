@@ -133,7 +133,7 @@ a {
 
 #bio-wrapper {
   text-align:center;
-  position:Relative;
+  position:relative;
   top:-25px;
 }
 
@@ -148,19 +148,9 @@ a {
   display:inline-block;
 }
 
-.chart-wrapper {
-	width: 20%;
-	margin: 0 auto;
-	display: inline-block;
-}
-
-.chart-gap {
-	width: 5%;
-	display: inline-block;
-}
-
 .chart {
-    padding: 3px;
+	color: #ffffff;
+	display:inline-block;
 }
 
 .chart div {
@@ -181,9 +171,15 @@ a {
   box-shadow: 2px 2px 2px #c97022;
 }
 
-.chart div:hover {
-	background-color:#fe5308;
+.axis {
+	color: #ffffff;
 }
+
+.axis path,
+.axis line {
+  stroke: #fff;
+}
+
 
 /* Responsive: Portrait tablets and up */
 @media (min-width: 820px) {

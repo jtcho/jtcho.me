@@ -21,28 +21,47 @@
 			link: function(scope, element) {
 				var d3 = $window.d3;
 
-				/*var lineFunction = d3.svg.line()
-					.x(function(d) { return d.x; })
-					.y(function(d) { return d.y; })
-					.interpolate('linear');*/
+				
+				var margin = {top: 0, right: 0, bottom: 0, left: 0},
+					width = 350 - margin.left - margin.right,
+					height = 350 - margin.top - margin.bottom;
 
-				//build chart div
-				var chart = d3.select(element[0]);
+				var x = d3.scale.linear()
+					.domain([0, 5])
+					.range([0, 5]);
 
-				chart.append('div')
+				var xAxis = d3.svg.axis()
+					.scale(x)
+					.ticks(5)
+					.tickSize(6)
+					.orient('bottom');
+
+				console.log(xAxis);
+
+				var container = d3.select(element[0]);
+				//Create the chart div.
+				container.append('svg')
 				.attr('class', 'chart')
+				.style('width', width + margin.left + margin.right + 'px')
+				.style('height', height + margin.top + margin.bottom + 'px')
+				//Get presently empty array of 'div' elements.
 				.selectAll('div')
+				//"Enter" all the data points into the selection.
 				.data(scope.data).enter().append('div')
 				.transition().ease('elastic')
 				.style('width', function(d) { return d.level + '%'; });
 
-				/*d3.select(element[0])
-				.append('svg').append('path')
-				.attr('d', lineFunction([{'x': 0, 'y': 0}, 
-					{'x': 0, 'y': 1000}]))
-				.attr('stroke', '#c97022')
-				.attr('stroke-width', 10)
-				.attr('fill', 'none');*/
+				var chart = container.selectAll('div');
+				//Add mouse-over highlighting!
+				chart.selectAll('div')
+				.on('mouseover', function () {
+					d3.select(this).transition()
+					.style('background-color', '#fe5308');
+				})
+				.on('mouseout', function() {
+					d3.select(this).transition()
+					.style('background-color', '#f8953f');
+				});
 			}
 		};
 	}
