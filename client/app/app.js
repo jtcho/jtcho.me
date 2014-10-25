@@ -10,7 +10,8 @@ angular.module('jtchoApp', [
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     $urlRouterProvider
-      .otherwise('/');
+    	// .when('portal', 'portal') //notnecessary
+    	.otherwise('/');
 
     $locationProvider.html5Mode(true);
   });

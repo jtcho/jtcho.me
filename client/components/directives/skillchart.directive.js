@@ -140,6 +140,10 @@ angular.module('jtchoApp')
  angular.module('jtchoApp')
  .controller('SkillCtrl', function($scope) {
  	
+ 	//Kind of annoying that the numbers
+ 	//seem arbitrary, but they add in like ~1.6
+ 	//increments to make the bars match up
+ 	//with the ticks.
  	$scope.programData = [
  	{skill:'Photoshop', level: 5},
  	{skill:'Illustrator', level: 3.35},
@@ -150,7 +154,7 @@ angular.module('jtchoApp')
 
  	$scope.langData = [
  	{skill:'HTML/CSS', level:6.65},
- 	{skill:'Javascript', level:3.35},
+ 	{skill:'Javascript', level:5},
  	{skill:'Java', level:6.65},
  	{skill:'Python', level:5},
  	{skill:'C/C++', level:5},
@@ -165,6 +169,7 @@ angular.module('jtchoApp')
  	{skill:'Socket.IO', level: 2}
  	];
 
+ 	//Definitions for the x-axis tick marks.
  	$scope.mapperData = {
 		'0':'',
 		'1':'meh',
