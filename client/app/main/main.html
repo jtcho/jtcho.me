@@ -7,9 +7,14 @@
   <!--PROJECTS-->
   <div class="row text-center" id="projects">
     <br>
-    <h1>PROJECTS</h1>
+    <h1>RECENT PROJECTS</h1>
 
-    <div class="project_square" ng-repeat="proj in projects">
+    <div id="project_grid"> 
+    	<a ng-repeat="proj in projects" ng-href="{{proj.link}}">
+   		<div class="project_square" style="background-image:url('/assets/images/{{proj.title}}')">
+    	</div>
+    	</a>
+
     </div>
 
   </div>
@@ -55,6 +60,9 @@
 
 <footer class="footer text-center">
   <div class="container">
+  	<p>
+  	designed by jt cho, © 2014. all rights reserved.
+  	</p><br>
     <a href="http://www.w3.org/TR/html5/">
       <img class="footer_badge" src="/assets/images/badge_html5.png" alt="HTML5 Powered!">
     </a>
@@ -64,6 +72,10 @@
 
     <a href="http://nodejs.org/">
       <img class="footer_badge" src="/assets/images/badge_node.png" alt="Run on Node!">
+    </a>
+
+    <a href="http://github.com/jtcho/jtcho.me/">
+    	<img class="footer_badge" src="/assets/images/badge_github.png" alt="Check out this website on Github!">
     </a>
   </div>
 </footer>

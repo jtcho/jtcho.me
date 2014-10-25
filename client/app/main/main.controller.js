@@ -10,4 +10,29 @@ angular.module('jtchoApp')
 				angular.element(document.getElementById(id)), 200, 2000);
 		}
 	};
+
+	//
+	$scope.projects = [
+		{
+			'title':'cat.jpg',
+			'link': '#',
+			'desc': 'I\'m watching you...'
+		},
+		{
+			'title':'cat.jpg',
+			'link': '#',
+			'desc': 'I\'m watching you...'
+		}, 
+		{
+			'title':'cat.jpg',
+			'link': '#',
+			'desc': 'I\'m watching you...'
+		}, 
+		{
+			'title':'cat.jpg',
+			'link': '#',
+			'desc': 'I\'m watching you...'
+		}
+	];
+
   });
