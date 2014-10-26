@@ -30,7 +30,7 @@ angular.module('jtchoApp')
 	var scrollables = ['projects', 'about', 'skills'];
 	if (scrollables.indexOf(id) >= 0) {
 		$document.scrollToElement(
-			angular.element(document.getElementById(id)), 200, 2000);
+			angular.element(document.getElementById(id)), 100, 1500);
 	}
 	};
 

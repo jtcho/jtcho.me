@@ -6,8 +6,13 @@
     <h1>RECENT PROJECTS</h1>
 
     <div id="project_grid"> 
-    	<a ng-repeat="proj in projects" ng-href="{{proj.link}}">
-   		<div class="project_square" style="background-image:url('/assets/images/{{proj.title}}')">
+    	<a ng-repeat="proj in projects" ui-sref="{{proj.state}}">
+    	<div class="project_thumb">
+	   		<div class="project_square" style="background-image:url('/assets/images/{{proj.title}}')">
+	    	</div>
+	    	<div class="project_text">
+	    	{{proj.desc}}
+	    	</div>
     	</div>
     	</a>
 

@@ -6,23 +6,23 @@ angular.module('jtchoApp')
 	//
 	$scope.projects = [
 		{
-			'title':'cat.jpg',
-			'link': '#',
-			'desc': 'I\'m watching you...'
+			'title':'anttracker/1.png',
+			'state': 'projects.ants',
+			'desc': 'Ant Blob Tracker'
 		},
 		{
 			'title':'cat.jpg',
-			'link': '#',
+			'state': '#',
 			'desc': 'I\'m watching you...'
 		}, 
 		{
 			'title':'cat.jpg',
-			'link': '#',
+			'state': '#',
 			'desc': 'I\'m watching you...'
 		}, 
 		{
 			'title':'cat.jpg',
-			'link': '#',
+			'state': '#',
 			'desc': 'I\'m watching you...'
 		}
 	];

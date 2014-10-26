@@ -11,9 +11,11 @@ angular.module('jtchoApp')
 				if (this.pageYOffset >= navbarOffset) {
 					navbar.style.top = '0px';
 					navbar.style.position = 'fixed';
+					angular.element('#projects').css('margin-top', '100px');
 				}
 				else {
 					navbar.style.position = 'static';
+					angular.element('#projects').css('margin-top', '0px');
 				}
 				scope.$apply();
 			});

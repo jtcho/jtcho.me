@@ -1,12 +1,34 @@
-<div class="container">
+<!-- Template HTML for Project Pages -->
+<div class="container" ng-controller = "ProjectCtrl">
 	<div class="jumbotron">
+		<a ui-sref="main">
+			<div class="page-curl"></div>
+		</a>
 		<div class="row text-center">
-			<h1>{{projectTitle}}</h1>
-		</div> <br>
-		<div id="row_separator"></div> <br>
+			<h2>{{projectTitle}}</h2>
+			<p ng-show="'{{sourceCode}}'">
+				<a href="{{sourceCode}}">
+					<img class="footer_badge" src="/assets/images/badge_github.png">
+				</a>
+			</p>
+		</div> 
+		<div id="row_separator"></div> 
+
+		<br><br>
 		
-		<p> {{desc}} </p>
+		<div style="width: 60%; margin: 0 auto;">
+			<p> {{desc}} </p>
+		</div>
 
 		<div class="project_image" style="background-image:url({{imageFolder}}main.png)"></div>
+
+
+		<div class="gallery">
+			<div class="project_thumbnail" ng-repeat="thumb in images | filter:'!main.png'" style="background-image:url({{imageFolder}}{{thumb}})"></div>
+		</div>
+
+		<div id="row_separator"></div>
+
+		<br><br>
 	</div>
-</div>
+</div>	
