@@ -18,5 +18,6 @@ angular.module('jtchoApp')
 				scope.$apply();
 			});
 		}
+		return function() {};
 	}
 ]);

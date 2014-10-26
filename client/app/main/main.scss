@@ -233,6 +233,30 @@ a, a:hover {
 	height: 10px;
 }
 
+//PROJECT PAGES STYLING, CONSIDER MODULARIZING ELSEWHERE.
+
+.jumbotron {
+	margin-top: 20px;
+	background-color: #2e2e2e;
+	color: #ffffff;
+}
+
+.jumbotron p {
+	font-size: 1.3em;
+}
+
+.jumbotron .project_image {
+	position: relative;
+	display: block;
+	background-size: contain;
+	background-repeat: no-repeat;
+	left: 17%;
+	margin: 50px auto;
+	width: 100% !important;
+	padding-top:40%;
+	overflow: hidden;
+}
+
 //Portrait tablets and wider.
 @media (min-width: 820px) {
 
