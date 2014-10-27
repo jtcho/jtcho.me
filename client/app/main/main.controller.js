@@ -13,17 +13,17 @@ angular.module('jtchoApp')
 		{
 			'title':'cat.jpg',
 			'state': '#',
-			'desc': 'I\'m watching you...'
+			'desc': 'Have a kitten, not done yet!'
 		}, 
 		{
-			'title':'cat.jpg',
+			'title':'cat2.gif',
 			'state': '#',
-			'desc': 'I\'m watching you...'
+			'desc': 'Haz more cats!'
 		}, 
 		{
-			'title':'cat.jpg',
+			'title':'cat3.gif',
 			'state': '#',
-			'desc': 'I\'m watching you...'
+			'desc': 'And even moar!'
 		}
 	];
 

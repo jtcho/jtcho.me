@@ -236,6 +236,8 @@ module.exports = function (grunt) {
             '<%= yeoman.dist %>/public/{,*/}*.css',
             //Renaming of images breaks some stuff.
             //'<%= yeoman.dist %>/public/assets/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+            '!<%= yeoman.dist %>/public/bower_components/animate.css',
+            '<%= yeoman.dist %>/public/bower_components/animate.css/animate.css',
             '<%= yeoman.dist %>/public/assets/fonts/*'
           ]
         }
@@ -255,7 +257,10 @@ module.exports = function (grunt) {
     // Performs rewrites based on rev and the useminPrepare configuration
     usemin: {
       html: ['<%= yeoman.dist %>/public/{,*/}*.html'],
-      css: ['<%= yeoman.dist %>/public/{,*/}*.css'],
+      css: ['<%= yeoman.dist %>/public/{,*/}*.css',
+      		'!<%= yeoman.dist %>/public/bower_components/animate.css',
+            '<%= yeoman.dist %>/public/bower_components/animate.css/animate.css'
+      ],
       js: ['<%= yeoman.dist %>/public/{,*/}*.js'],
       options: {
         assetsDirs: [
@@ -538,7 +543,9 @@ module.exports = function (grunt) {
         },
         files: {
           '<%= yeoman.client %>/index.html': [
-            '<%= yeoman.client %>/{app,components}/**/*.css'
+            '<%= yeoman.client %>/{app,components}/**/*.css',
+            '!<%= yeoman.dist %>/public/bower_components/animate.css',
+            '<%= yeoman.dist %>/public/bower_components/animate.css/animate.css'
           ]
         }
       }

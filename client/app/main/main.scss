@@ -331,6 +331,28 @@ a, a:hover {
 	opacity: 1.0;
 }
 
+.portal h1 {
+	position: relative;
+	display: none;
+	z-index: 100;
+	top: -290px;
+	color: #074060;
+	margin: 10px auto;
+	font-size: 5em;
+}
+
+.portal h2 {
+	position: relative;
+	display: none;
+	z-index: 100;
+	top: -285px;
+	color: #074060;
+	margin: 0px auto;
+	font-size: 3em;
+	letter-spacing: 3px;
+	font-weight:100;
+}
+
 //Portrait tablets and wider.
 @media (min-width: 820px) {
 
@@ -349,6 +371,17 @@ a, a:hover {
 
   #programs {
     display: inline-block;
+  }
+
+
+  .portal h1 {
+	display: block;
+	opacity: 0;
+  }
+
+  .portal h2 {
+  	display: block;
+  	opacity: 0;
   }
 
 }
