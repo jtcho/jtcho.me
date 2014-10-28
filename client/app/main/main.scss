@@ -49,7 +49,8 @@ a, a:hover {
 //A window to another dimension...
 .portal {
   background-color: #f8993d;
-  padding-top:20.83%; //Force a 1920:400 aspect ratio.
+  //padding-top:20.83%; //Force a 1920:400 aspect ratio.
+  padding-top:20.83%;
   background-image:url('/assets/images/day1.gif');
   background-size:cover;
 }
@@ -335,7 +336,7 @@ a, a:hover {
 	position: relative;
 	display: none;
 	z-index: 100;
-	top: -290px;
+	top: -215px;
 	color: #074060;
 	margin: 10px auto;
 	font-size: 5em;
@@ -345,7 +346,7 @@ a, a:hover {
 	position: relative;
 	display: none;
 	z-index: 100;
-	top: -285px;
+	top: -214px;
 	color: #074060;
 	margin: 0px auto;
 	font-size: 3em;
@@ -369,6 +370,10 @@ a, a:hover {
 //Hide the Programs skill chart at screen widths less than 900.
 @media (min-width: 900px) {
 
+  .portal {
+  	padding-top:15%;
+  }
+  
   #programs {
     display: inline-block;
   }

@@ -60,11 +60,29 @@ angular.module('jtchoApp').config(function ($stateProvider, $uiViewScrollProvide
 			source_code: 'http://github.com/jtcho/AntParticleTracker'
 			//http://tinyurl.com/anttracking
 		}
-	});
-	// .state('helloworld', {
-	// 	url:'/test',
-	// 	templateUrl: 'components/portal/portal.html'
-	// });
+	})
+	.state('projects.nalda', {
+		title: '',
+		desc: '',
+		image_folder: '',
+		images: [],
+		source_code: ''
+	})
+	.state('projects.colorfeel') {
+		title: '',
+		desc: '',
+		image_folder: '',
+		images: [],
+		source_code: ''
+	})
+	.state('projects.aiura') {
+		title: '',
+		desc: '',
+		image_folder: '',
+		images: [],
+		source_code: ''
+	})
+	;
 });
 
 /**
