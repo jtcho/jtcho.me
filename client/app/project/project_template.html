@@ -5,12 +5,18 @@
 			<div class="page-curl"></div>
 		</a>
 		<div class="row text-center">
-			<h2>{{projectTitle}}</h2>
+			<h2 ng-show="link" >
+			<a ng-href="{{link}}" style="text-decoration: underline;">{{projectTitle}}</a>
+			</h2>
+			<h2 ng-hide="link">{{projectTitle}}</h2>
+
+			<br>
 			<p ng-show="'{{sourceCode}}'">
 				<a href="{{sourceCode}}">
 					<img class="footer_badge" src="/assets/images/badge_github.png">
 				</a>
 			</p>
+			<br>
 		</div> 
 		<div id="row_separator"></div> 
 
@@ -19,6 +25,7 @@
 		<div style="width: 60%; margin: 0 auto;">
 			<p> {{desc}} </p>
 		</div>
+		<br>
 
 		<div class="project_image" style="background-image:url({{imageFolder}}main.png)"></div>
 

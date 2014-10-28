@@ -31,6 +31,7 @@ angular.module('jtchoApp').config(function ($stateProvider, $uiViewScrollProvide
 		//Custom data to be overriden.
 		data: {
 			title: '',
+			link: '',
 			desc : '',
 			image_folder: '',
 			images: [],
@@ -62,25 +63,62 @@ angular.module('jtchoApp').config(function ($stateProvider, $uiViewScrollProvide
 		}
 	})
 	.state('projects.nalda', {
-		title: '',
-		desc: '',
-		image_folder: '',
-		images: [],
-		source_code: ''
+		url: '/flynalda',
+		templateUrl: 'app/project/project_template.html',
+		controller: function($state, $scope) { inject_project($state, $scope); },
+		data: {
+			title: 'NALDA Easy Travel',
+			link: 'http://flynalda.com',
+			desc: 'An ongoing side-project I took on for a friend. I designed a website for his NALDA project, '+
+			'a service that helps students finance and plan their trips to Cancun. By qualifying various '+
+			'attractions by word of mouth and aggregate opinion, we can recommend various activities and '+
+			'venues to clients, as well as NALDA-specific discounts.',
+			image_folder: 'assets/images/nalda/',
+			images: [
+				'1.png', '2.png', '3.png'
+			],
+			source_code: 'https://github.com/jtcho/NALDA'
+		}
 	})
-	.state('projects.colorfeel') {
-		title: '',
-		desc: '',
-		image_folder: '',
-		images: [],
-		source_code: ''
+	.state('projects.colorfeel', {
+		url: '/colorfeel',
+		templateUrl: 'app/project/project_template.html',
+		controller: function($state, $scope) { inject_project($state, $scope); },
+		data: {
+			title: 'Colorfeel',
+			link: 'http://hackmit2014.challengepost.com/submissions/27794-colorfeel',
+			desc: 'My first iOS project and submission for HackMIT Fall 2014. '+
+			'The blurb from the submission: '+
+			'Coming from campuses where mental health issues have been a growing concern, '+
+			'we wanted to create a tool to help students self-identify trends of depression '+
+			'as they emerge. Colorfeel is a mood monitoring app that utilizes colors to help '+
+			'users record and identify patterns in their daily emotions. Colors are universal '+
+			'and can be interpreted differently from person to person, which allows for a wide '+
+			'range of emotion to be expressed without the use of words.',
+			image_folder: 'assets/images/colorfeel/',
+			images: [
+				'main.png', '1.png', '2.png'
+			],
+			source_code: 'https://github.com/mikehcheng/Colorfeel'
+		}
 	})
-	.state('projects.aiura') {
-		title: '',
-		desc: '',
-		image_folder: '',
-		images: [],
-		source_code: ''
+	.state('projects.aiura', {
+		url: '/aiurarpg',
+		templateUrl: 'app/project/project_template.html',
+		controller: function($state, $scope) { inject_project($state, $scope); },
+		data: {
+			title: 'Aiura/Aelfcraft RPG (Minecraft Bukkit Mod)',
+			desc: 'A fun side-project I undertook during my junior/senior years in high school. I built a '+
+			'full scale multiplayer RPG mod for the game Minecraft using Bukkit. ' +
+			'This project taught me a surprising amount of Java that I did not anticipate having to learn: '+
+			'mostly Reflection, with a large appreciation for reverse-engineering compiled and obfuscated '+
+			'code. Bukkit is now discontinued, but you can see the source code and pictures!',
+			image_folder: 'assets/images/aiura/',
+			images: [
+				'main.png', '1.png', '2.png', '3.png', '4.png', '5.png'
+			],
+			source_code: 'https://github.com/jtcho/AelfCraft'
+		}
 	})
 	;
 });
@@ -95,4 +133,6 @@ var inject_project = function($state, $scope) {
 	$scope.imageFolder = $state.current.data.image_folder;
 	$scope.images = $state.current.data.images;
 	$scope.sourceCode = $state.current.data.source_code;
+	$scope.link = $state.current.data.link;
+
 }
