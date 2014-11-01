@@ -20,13 +20,13 @@ angular.module('jtchoApp')
 	//Move the hero on keyboard inputs.
 	KeyboardService.on(function(key) {
 		var vecs = {
-			'left': -20,
-			'right': 20
-		};
+			'left': -10,
+			'right': 10
+		}
 
 		var hero = $scope.hero;
 
-		if (hero.dir != vecs[key]/20) {
+		if (hero.dir != vecs[key]/10) {
 			hero.x += 51 * hero.dir; //half of hero width (101)
 			hero.dir *= -1;
 		}

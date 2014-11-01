@@ -14,6 +14,7 @@ html, body {
   background-image:url('/assets/images/background_tile.png');
   background-attachment: fixed;
   width: 100%;
+  min-width: 980px;
 }
 
 h1, h2 {
@@ -353,7 +354,7 @@ h1, h2 {
 	z-index: 100;
 	color: #074060;
 	margin:auto;
-	font-size: 2em;
+	font-size: 1em;
 	letter-spacing: 3px;
 	font-weight:100;
   overflow: hidden;
