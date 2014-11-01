@@ -34,8 +34,7 @@
 	animation: fire_play 0.5s steps(8) infinite;
 }
 
-//Hide the API skill chart at screen widths less than 1300.
-@media (min-width: 1300px) {
+@media (min-width: 1600px) {
   
 	.fire {
 		display: inline-block;
