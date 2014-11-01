@@ -50,8 +50,8 @@ a, a:hover {
 .portal {
   background-color: #f8993d;
   //padding-top:20.83%; //Force a 1920:400 aspect ratio.
-  padding-top:20.83%;
-  background-image:url('/assets/images/day1.gif');
+  height: 400px;
+  width: 100%;
   background-size:cover;
 }
 
@@ -371,7 +371,7 @@ a, a:hover {
 @media (min-width: 900px) {
 
   .portal {
-  	padding-top:15%;
+  	//padding-top:15%;
   }
   
   #programs {

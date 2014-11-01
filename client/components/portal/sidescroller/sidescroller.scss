@@ -1,0 +1,15 @@
+
+.hero {
+	width: 101px;
+	height: 101px;
+	background: url('/assets/images/sidescroller/hero_sprite.png') left center;
+	animation: hero_play 0.5s steps(8) infinite;
+	position: relative;
+	top: 237px;
+	z-index: 101;
+	display: inline-block;
+}
+
+@keyframes hero_play {
+	100% {	background-position: -808px; }
+}

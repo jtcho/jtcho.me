@@ -6,7 +6,9 @@ angular.module('jtchoApp', [
   'ngSanitize',
   'ui.router',
   'ui.bootstrap',
-  'duScroll'
+  'duScroll',
+  'Game',
+  'World'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     $urlRouterProvider
