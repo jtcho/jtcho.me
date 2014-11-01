@@ -1,15 +1,70 @@
 
+@mixin world_element {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
 .hero {
-	width: 101px;
-	height: 101px;
+	width: 90px;
+	height: 100px;
 	background: url('/assets/images/sidescroller/hero_sprite.png') left center;
-	animation: hero_play 0.5s steps(8) infinite;
-	position: relative;
-	top: 237px;
-	z-index: 101;
+	background-repeat:no-repeat;
+	position: absolute;
+	top: 238px;
+	z-index: 5;
 	display: inline-block;
+	animation: hero_play 0.5s steps(8) infinite;
 }
 
 @keyframes hero_play {
 	100% {	background-position: -808px; }
+}
+
+.foliage_front {
+	@include world_element;
+	background: url('/assets/images/sidescroller/sunset/foliage_front.png') no-repeat;
+	z-index: 6;
+}
+
+.foliage_back {
+	@include world_element;
+	background: url('/assets/images/sidescroller/sunset/foliage_back.png') no-repeat;
+	z-index: 4;
+}
+
+.static {
+	@include world_element;
+	background: url('/assets/images/sidescroller/sunset/static.png') no-repeat;
+	z-index: 10;
+}
+
+.clouds {
+	@include world_element;
+	background: url('/assets/images/sidescroller/sunset/clouds.png') no-repeat;
+	z-index: 1;
+	animation: cloud_scroll 160s infinite;
+	-webkit-animation-timing-function: linear; /* Chrome, Safari, Opera */
+    animation-timing-function: linear
+}
+
+.clouds_back {
+	@include world_element;
+	background: url('/assets/images/sidescroller/sunset/clouds_back.png') no-repeat;
+	opacity: 0.6;
+	z-index: 1;
+	top: -100px;
+	animation: cloud_scroll_back 120s infinite;
+	-webkit-animation-timing-function: linear; /* Chrome, Safari, Opera */
+    animation-timing-function: linear;
+}
+
+@keyframes cloud_scroll {
+	0% 		{	background-position: -1920px 0; }
+	100% 	{	background-position: 1920px 0; }
+}
+
+@keyframes cloud_scroll_back {
+	0% 		{	background-position: -2880px 0; }
+	100% 	{	background-position: 1920px 0; }
 }

@@ -19,14 +19,14 @@ html, body {
 h1, h2 {
   color:#ffffff;
   letter-spacing: 0px;
-}s
+  }s
 
-p {
-  color: #b3b3b3;
-}
+  p {
+    color: #b3b3b3;
+  }
 
-a, a:hover {
-  color: #f5d18e;
+  a, a:hover {
+    color: #f5d18e;
   text-decoration: none; //remove pesky underlines
 }
 
@@ -53,6 +53,9 @@ a, a:hover {
   height: 400px;
   width: 100%;
   background-size:cover;
+  z-index: 10;
+  position: relative;
+  text-align: center;
 }
 
 //navbar stuff
@@ -74,11 +77,11 @@ a, a:hover {
 }
 
 .navbar-nav{
-    margin: 0 auto;
-    display: table;
-    table-layout: fixed;
-    float:none;
-    padding-top: 25px;
+  margin: 0 auto;
+  display: table;
+  table-layout: fixed;
+  float:none;
+  padding-top: 25px;
 }
 
 .navbar-nav > li {
@@ -174,27 +177,27 @@ a, a:hover {
 }
 
 #skills {
-    height: 600px;
+  height: 600px;
 }
 
 .chart {
-    display:inline-block;
+  display:inline-block;
 }
 
 #programs, #apis {
-    display: none;
+  display: none;
 }
 
 .axis {
-    fill: #fff;
+  fill: #fff;
 }
 
 .axis path,
 .axis line {
-    fill: none;
-    stroke-width: 2px;
-    stroke-rendering: crispEdges;
-    stroke: #e26b04;
+  fill: none;
+  stroke-width: 2px;
+  stroke-rendering: crispEdges;
+  stroke: #e26b04;
 }
 
 #project_grid {
@@ -212,13 +215,13 @@ a, a:hover {
 }
 
 .project_square {
-    width: 200px;
-    height: 200px;
-    background-color:#f8953f;
-    display: inline-block;
-    transition:0.3s;
-    background-size:100%;
-    background-repeat: no-repeat;
+  width: 200px;
+  height: 200px;
+  background-color:#f8953f;
+  display: inline-block;
+  transition:0.3s;
+  background-size:100%;
+  background-repeat: no-repeat;
 }
 
 .project_square:hover {
@@ -303,14 +306,14 @@ a, a:hover {
 	width: 200px;
 	height: 200px;
 	background-color:#2e2e2e;
-    display: inline-block;
-    position: relative;
-    margin: 30px;
-    background-position: center;
-    background-size: 200px auto;
-    background-repeat: no-repeat;
-    border-radius: 100%;
-    transition:0.3s;
+  display: inline-block;
+  position: relative;
+  margin: 30px;
+  background-position: center;
+  background-size: 200px auto;
+  background-repeat: no-repeat;
+  border-radius: 100%;
+  transition:0.3s;
 }
 
 .jumbotron .project_thumbnail:hover {
@@ -333,25 +336,29 @@ a, a:hover {
 }
 
 .portal h1 {
-	position: relative;
-	display: none;
+	position: absolute;
+	//display: none;
 	z-index: 100;
-	top: -215px;
 	color: #074060;
-	margin: 10px auto;
-	font-size: 5em;
+	margin: auto;
+	font-size: 2em;
+  overflow: hidden;
+  white-space: nowrap;
+  top: 30px; left: 0; right: 0; bottom: 0;
 }
 
 .portal h2 {
-	position: relative;
-	display: none;
+	position: absolute;
+	//display: none;
 	z-index: 100;
-	top: -214px;
 	color: #074060;
-	margin: 0px auto;
-	font-size: 3em;
+	margin:auto;
+	font-size: 2em;
 	letter-spacing: 3px;
 	font-weight:100;
+  overflow: hidden;
+  white-space: nowrap;
+  top: 60px; left: 0; right: 0; bottom: 0;
 }
 
 //Portrait tablets and wider.
@@ -380,13 +387,16 @@ a, a:hover {
 
 
   .portal h1 {
-	display: block;
-	opacity: 0;
+    font-size: 5em;
+    display: block;
+    opacity: 0;
   }
 
   .portal h2 {
+    font-size: 3em;
   	display: block;
   	opacity: 0;
+    top: 100px;
   }
 
 }
