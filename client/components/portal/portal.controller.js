@@ -76,7 +76,7 @@ var initPortal = function($rootScope) {
 	else if (hours > 19 && hours < 21) {
 		tP = 'dusk';
 	}
-	else if (true || hours > 21 && hours < 24) {
+	else if (hours > 21 && hours < 24) {
 		tP = 'evening';
 	}
 	else if (hours > 0 && hours < 6) {
