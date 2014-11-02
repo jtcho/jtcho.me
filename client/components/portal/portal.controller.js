@@ -3,9 +3,7 @@
 //temporary splash until we have time to make dat game
 angular.module('jtchoApp')
 .controller('PortalCtrl', function ($scope, KeyboardService) {
-
-	console.log('test');
-
+	
 	initPortal($scope);
 
 	KeyboardService.init();
@@ -66,7 +64,7 @@ var initPortal = function($rootScope) {
 		$('.portal h2').css('color', '#e0b661');
 	}
 	else
-		$rootScope.timealpha =1.0;
+		$rootScope.timeAlpha =1.0;
 
 	//SUNSET, 5PM - 7PM
 	if (hours > 17 && hours < 19) {
@@ -76,11 +74,17 @@ var initPortal = function($rootScope) {
 	else if (hours > 19 && hours < 21) {
 		tP = 'dusk';
 	}
+	//EVENING, 9PM - 12AM
 	else if (hours > 21 && hours < 24) {
 		tP = 'evening';
 	}
+	//NIGHT, 12AM - 6AM
 	else if (hours > 0 && hours < 6) {
 		tP = 'night';
+	}
+	//DAY, 6AM - 5PM
+	else {
+		tP = 'day';
 	}
 
 	//Update all of the css elements depending on the time of day.
