@@ -5,7 +5,7 @@
 	position: absolute;
 }
 
-.hero {
+#hero {
 	width: 90px;
 	height: 100px;
 	background: url('/assets/images/sidescroller/hero_sprite.png') left center;
@@ -46,22 +46,38 @@
 	100% { 	background-position: -800px;	}
 }
 
+
+.caliburn {
+	width: 85px;
+	height: 154px;
+	background: url('/assets/images/sidescroller/caliburn_sprite.png') left center no-repeat;
+	position: absolute;
+	top: 184px;
+	left: 375px;
+	z-index: 7;
+	animation: cal_glow 5s steps(20) infinite;
+}
+
+@keyframes cal_glow {
+	100% {	background-position: -1701px;	}
+}
+
 .foliage_front {
 	@include world_element;
-	background: url('/assets/images/sidescroller/sunset/foliage_front.png') no-repeat;
+	background-repeat: no-repeat;
 	z-index: 6;
 	opacity: 0.98;
 }
 
 .foliage_back {
 	@include world_element;
-	background: url('/assets/images/sidescroller/sunset/foliage_back.png') no-repeat;
+	background-repeat: no-repeat;
 	z-index: 4;
 }
 
-.static {
+.ruins {
 	@include world_element;
-	background: url('/assets/images/sidescroller/sunset/static.png') no-repeat;
+	background-repeat: no-repeat;
 	z-index: 10;
 }
 
@@ -95,21 +111,26 @@
 	100% 	{	background-position: 1920px 0; }
 }
 
-.stone {
+.stars {
 	@include world_element;
-	background: url('/assets/images/sidescroller/sunset/stone.png') no-repeat;
-	z-index: 6;
+	z-index: 1;
+	opacity: 0.25;
+	animation: star_glow 7s infinite;
 }
 
-.caliburn {
-	@include world_element;
-	background: url('/assets/images/sidescroller/sunset/caliburn.png') no-repeat;
-	z-index: 7;
-	opacity: 0.7;
+@keyframes star_glow {
+	50% 	{	opacity: 1.0;	}
+	100%	{	opacity: 0.25;	}
 }
 
 .tent {
 	@include world_element;
-	background: url('/assets/images/sidescroller/sunset/tent.png') no-repeat;
+	background-repeat: no-repeat;
 	z-index: 4;
+}
+
+.grass {
+	@include world_element;
+	background-repeat: no-repeat;
+	z-index: 100;
 }

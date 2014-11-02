@@ -6,8 +6,6 @@ angular.module('jtchoApp')
 
 	this.game = GameManager;
 
-	$('.portal').css('background-image', 'url(\''+WorldService.background+'\')');
-
 	KeyboardService.init();
 
 	var currWindow = angular.element(window);
@@ -69,12 +67,38 @@ angular.module('Game', [])
  * World service.
  */
 angular.module('World', [])
-.service('WorldService', function() {
+.service('WorldService', ['$rootScope', function($rootScope) {
+
+	this.aP = '/assets/images/sidescroller/';
+	this.tP = 'sunset';
+
+	var currentTime = new Date();
+	var hours = currentTime.getHours();
+
+	//DUSK
+	if (hours > 19 || hours < 5) {
+		this.tP = 'dusk';
+		var duskFilter = 'brightness(0);';
+		$('.portal h1').css('color', '#e0b661');
+		$('.portal h2').css('color', '#e0b661');
+
+		$rootScope.timeAlpha = 0.5;
+	}
+
+
+	this.background = this.aP + this.tP + '/background.png';
 
 	//@todo add changing background based on time of day
-	this.background = '/assets/images/sidescroller/sunset/background.png';
+	var stageElements = [
+		'portal', 'clouds', 'clouds_back', 'ruins', 'foliage_back', 'foliage_front', 'tent',
+		'grass', 'stars'
+	];
 
-});
+	for (var i = 0; i < stageElements.length; i++) {
+		$('.'+stageElements[i]).css('background-image', 
+			'url(\'' + this.aP + this.tP + '/' + stageElements[i] + '.png\')');
+	}
+}]);
 
 /*
  *

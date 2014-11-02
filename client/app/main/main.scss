@@ -72,7 +72,7 @@ h1, h2 {
   text-align:center;
   height: auto;
   font-family: "avenirLight", sans-serif;
-  font-size:1.3em;
+  font-size: 1.3em;
   color: #FFFFFF;
   letter-spacing: 1px;
 }
@@ -104,11 +104,6 @@ h1, h2 {
 .nav a:hover:after {
 	width:100%;
 	left: 0%;
-}
-
-.navbar-brand {
-  line-height: 100px;
-  height: auto;
 }
 
 //row div stuff
@@ -147,7 +142,7 @@ h1, h2 {
   background-image:url('/assets/images/jtsprite.gif');
   height:350px;
   width:231px;
-  display:none;
+  display:inline-block;
   margin-right: 5%;
   top: -135px;
   position:relative;
@@ -185,7 +180,11 @@ h1, h2 {
   display:inline-block;
 }
 
-#programs, #apis {
+#programs {
+  display: inline-block;
+}
+
+#apis {
   display: none;
 }
 
@@ -342,7 +341,7 @@ h1, h2 {
 	z-index: 100;
 	color: #074060;
 	margin: auto;
-	font-size: 2em;
+	font-size: 5em;
   overflow: hidden;
   white-space: nowrap;
   top: 30px; left: 0; right: 0; bottom: 0;
@@ -354,38 +353,23 @@ h1, h2 {
 	z-index: 100;
 	color: #074060;
 	margin:auto;
-	font-size: 1em;
+	font-size: 3em;
 	letter-spacing: 3px;
 	font-weight:100;
   overflow: hidden;
   white-space: nowrap;
-  top: 60px; left: 0; right: 0; bottom: 0;
+  top: 100px; left: 0; right: 0; bottom: 0;
 }
 
 //Portrait tablets and wider.
-@media (min-width: 820px) {
-
-  #jtsprite {
-    display:inline-block;
-  }
-
-  .navbar {
-    display:block;
-  }
-
-}
+@media (min-width: 820px) {}
 
 //Hide the Programs skill chart at screen widths less than 900.
 @media (min-width: 900px) {
 
-  .portal {
-  	//padding-top:15%;
+  .navbar {
+    display: block;
   }
-  
-  #programs {
-    display: inline-block;
-  }
-
 
   .portal h1 {
     font-size: 5em;
