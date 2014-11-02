@@ -29,30 +29,23 @@ angular.module('jtchoApp')
 			hero.dir *= -1;
 		}
 
-		hero.x += vecs[key];
-		if (hero.dir < 0 && hero.x < -50)
-			hero.x = currWindow.width();
-
-		else if (hero.dir > 0 && hero.x > currWindow.width())
-			hero.x = -55;
+		if (!(hero.dir < 0 && hero.x < - 50) && !(hero.dir > 0 && hero.x > currWindow.width() - 90)) {
+			hero.x += vecs[key];
+		}
 
 		//force update
 		$scope.$apply();
 	});
 
-	$('<img/>').attr('src', '/assets/images/day1.gif').load(function() {
-   		$(this).remove(); // prevent memory leaks as @benweet suggested
-   		var splash1 = angular.element('.portal h1');
-		var splash2 = angular.element('.portal h2');
-		splash1.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-			splash2.css('opacity', '1.0');
-			splash2.addClass('animated bounceInUp');
-		});
-
-		splash1.addClass('animated zoomIn');
-		splash1.css('opacity', '1.0');
+	var splash1 = angular.element('.portal h1');
+	var splash2 = angular.element('.portal h2');
+	splash1.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+		splash2.css('opacity', '1.0');
+		splash2.addClass('animated bounceInUp');
 	});
 
+	splash1.addClass('animated zoomIn');
+	splash1.css('opacity', '1.0');
 });
 
 /*
@@ -88,7 +81,7 @@ angular.module('World', [])
 
 	this.background = this.aP + this.tP + '/background.png';
 
-	//@todo add changing background based on time of day
+	//Update all of the css elements depending on the time of day.
 	var stageElements = [
 		'portal', 'clouds', 'clouds_back', 'ruins', 'foliage_back', 'foliage_front', 'tent',
 		'grass', 'stars'
@@ -146,17 +139,3 @@ angular.module('World', [])
  		}
  	};
  });
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -22,12 +22,12 @@
 }
 
 .fire {
-	width: 100px;
+	width: 123px;
 	height: 100px;
-	background: url('/assets/images/sidescroller/fire_sprite.png') left center;
+	background: url('/assets/images/sidescroller/fire2_sprite.png') left center;
 	background-repeat:no-repeat;
 	position: absolute;
-	top: 238px;
+	top: 245px;
 	left: 1500px;
 	z-index: 5;
 	display: none;
@@ -43,7 +43,7 @@
 }
 
 @keyframes fire_play {
-	100% { 	background-position: -800px;	}
+	100% { 	background-position: -984px;	}
 }
 
 
