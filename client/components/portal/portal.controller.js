@@ -2,9 +2,11 @@
 
 //temporary splash until we have time to make dat game
 angular.module('jtchoApp')
-.controller('PortalCtrl', function ($scope, GameManager, WorldService, KeyboardService) {
+.controller('PortalCtrl', function ($scope, KeyboardService) {
 
-	this.game = GameManager;
+	console.log('test');
+
+	initPortal($scope);
 
 	KeyboardService.init();
 
@@ -29,7 +31,7 @@ angular.module('jtchoApp')
 			hero.dir *= -1;
 		}
 
-		if (!(hero.dir < 0 && hero.x < - 50) && !(hero.dir > 0 && hero.x > currWindow.width() - 90)) {
+		if (!(hero.dir < 0 && hero.x < - 50) && !(hero.dir > 0 && hero.x > currWindow.width() - 100)) {
 			hero.x += vecs[key];
 		}
 
@@ -48,38 +50,38 @@ angular.module('jtchoApp')
 	splash1.css('opacity', '1.0');
 });
 
-/*
- * Game service.
+/**
+ * Initializes the portal depending on the given time of day.
  */
-angular.module('Game', [])
-.service('GameManager', function() {
-	//Add functions here.
-});
-
-/*
- * World service.
- */
-angular.module('World', [])
-.service('WorldService', ['$rootScope', function($rootScope) {
-
-	this.aP = '/assets/images/sidescroller/';
-	this.tP = 'sunset';
+var initPortal = function($rootScope) {
+	var aP = '/assets/images/sidescroller/';
+	var tP = 'sunset';
 
 	var currentTime = new Date();
 	var hours = currentTime.getHours();
 
-	//DUSK
-	if (hours > 19 || hours < 5) {
-		this.tP = 'dusk';
-		var duskFilter = 'brightness(0);';
+	if (! (hours > 6 && hours < 19)) {
+		$rootScope.timeAlpha = 0.5;
 		$('.portal h1').css('color', '#e0b661');
 		$('.portal h2').css('color', '#e0b661');
-
-		$rootScope.timeAlpha = 0.5;
 	}
+	else
+		$rootScope.timealpha =1.0;
 
-
-	this.background = this.aP + this.tP + '/background.png';
+	//SUNSET, 5PM - 7PM
+	if (hours > 17 && hours < 19) {
+		tP = 'sunset';
+	}
+	//DUSK, 7PM - 9PM
+	else if (hours > 19 && hours < 21) {
+		tP = 'dusk';
+	}
+	else if (hours > 21 && hours < 24) {
+		tP = 'evening';
+	}
+	else if (hours > 0 && hours < 6) {
+		tP = 'night';
+	}
 
 	//Update all of the css elements depending on the time of day.
 	var stageElements = [
@@ -89,53 +91,6 @@ angular.module('World', [])
 
 	for (var i = 0; i < stageElements.length; i++) {
 		$('.'+stageElements[i]).css('background-image', 
-			'url(\'' + this.aP + this.tP + '/' + stageElements[i] + '.png\')');
+			'url(\'' + aP + tP + '/' + stageElements[i] + '.png\')');
 	}
-}]);
-
-/*
- *
- */
- angular.module('Keyboard', [])
- .service('KeyboardService', function($document) {
-
- 	var RIGHT = 'right',
-     	LEFT  = 'left';
-
-    var keyboardMap = {
-	    37: LEFT,
-	    39: RIGHT
-  	};
-
- 	this.init = function() {
- 		var self = this;
- 		this.keyEventHandlers = [];
- 		$document.bind('keydown', function(evt) {
- 			var key = keyboardMap[evt.which];
-
- 			if (key) {
- 				//
- 				evt.preventDefault();
- 				self._handleKeyEvent(key, evt);
- 			}
- 		});
- 	};
-
- 	this.on = function(cb) {
- 		this.keyEventHandlers.push(cb);
- 	};
-
- 	this._handleKeyEvent = function(key, evt) {
- 		var callbacks = this.keyEventHandlers;
- 		if (! callbacks) {	return;	}
-
- 		evt.preventDefault();
-
- 		if (callbacks) {
- 			for (var x = 0; x < callbacks.length; x++) {
- 				var cb = callbacks[x];
- 				cb(key, evt);
- 			}
- 		}
- 	};
- });
+}

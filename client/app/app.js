@@ -7,8 +7,6 @@ angular.module('jtchoApp', [
   'ui.router',
   'ui.bootstrap',
   'duScroll',
-  'Game',
-  'World',
   'Keyboard'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {

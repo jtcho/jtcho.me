@@ -84,6 +84,7 @@
 .clouds {
 	@include world_element;
 	background: url('/assets/images/sidescroller/sunset/clouds.png') no-repeat;
+	opacity: 0.8;
 	z-index: 1;
 	animation: cloud_scroll 160s infinite;
 	-webkit-animation-timing-function: linear; /* Chrome, Safari, Opera */
