@@ -5,11 +5,10 @@
 	position: absolute;
 }
 
-#hero {
+.hero {
 	width: 90px;
 	height: 100px;
-	background: url('/assets/images/sidescroller/hero_sprite.png') left center;
-	background-repeat:no-repeat;
+	background: url('/assets/images/sidescroller/hero_sprite.png') left center no-repeat;
 	position: absolute;
 	top: 238px;
 	z-index: 5;
@@ -21,11 +20,26 @@
 	100% {	background-position: -808px; }
 }
 
+.dog {
+	width: 116px;
+	height: 78px;
+	background: url('/assets/images/sidescroller/dog_sprite.png') left center no-repeat;
+	position: absolute;
+	top: 260px;
+	left: 800px;
+	z-index: 6;
+	display: inline-block;
+	animation: dog_wag 0.5s steps(4) infinite;
+}
+
+@keyframes dog_wag {
+	100%	{	background-position: -464px;	}
+}
+
 .fire {
 	width: 123px;
 	height: 100px;
-	background: url('/assets/images/sidescroller/fire2_sprite.png') left center;
-	background-repeat:no-repeat;
+	background: url('/assets/images/sidescroller/fire2_sprite.png') left center no-repeat;
 	position: absolute;
 	top: 245px;
 	left: 1500px;
@@ -48,7 +62,7 @@
 
 
 .caliburn {
-	width: 85px;
+	width: 69px;
 	height: 154px;
 	background: url('/assets/images/sidescroller/caliburn_sprite.png') left center no-repeat;
 	position: absolute;
@@ -59,7 +73,7 @@
 }
 
 @keyframes cal_glow {
-	100% {	background-position: -1701px;	}
+	100% {	background-position: -1700px;	}
 }
 
 .foliage_front {
@@ -134,4 +148,10 @@
 	@include world_element;
 	background-repeat: no-repeat;
 	z-index: 100;
+}
+
+.fall_decor {
+	@include world_element;
+	background-repeat: no-repeat;
+	z-index: 3;
 }

@@ -11,7 +11,7 @@ angular.module('jtchoApp')
 	var currWindow = angular.element(window);
 
 	$scope.hero = {
-		x: currWindow.width()/2,
+		x: currWindow.width() * 2/3,
 		dir: 1
 	};
 
@@ -40,8 +40,8 @@ angular.module('jtchoApp')
 	var splash1 = angular.element('.portal h1');
 	var splash2 = angular.element('.portal h2');
 	splash1.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+		splash2.addClass('animated bounceInDown');
 		splash2.css('opacity', '1.0');
-		splash2.addClass('animated bounceInUp');
 	});
 
 	splash1.addClass('animated zoomIn');
@@ -58,7 +58,7 @@ var initPortal = function($rootScope) {
 	var currentTime = new Date();
 	var hours = currentTime.getHours();
 
-	if (! (hours > 6 && hours < 19)) {
+	if (! (hours >= 6 && hours < 19)) {
 		$rootScope.timeAlpha = 0.5;
 		$('.portal h1').css('color', '#e0b661');
 		$('.portal h2').css('color', '#e0b661');
@@ -67,19 +67,19 @@ var initPortal = function($rootScope) {
 		$rootScope.timeAlpha =1.0;
 
 	//SUNSET, 5PM - 7PM
-	if (hours > 17 && hours < 19) {
+	if (hours >= 17 && hours < 19) {
 		tP = 'sunset';
 	}
 	//DUSK, 7PM - 9PM
-	else if (hours > 19 && hours < 21) {
+	else if (hours >= 19 && hours < 21) {
 		tP = 'dusk';
 	}
 	//EVENING, 9PM - 12AM
-	else if (hours > 21 && hours < 24) {
+	else if (hours >= 21 && hours < 24) {
 		tP = 'evening';
 	}
 	//NIGHT, 12AM - 6AM
-	else if (hours > 0 && hours < 6) {
+	else if (hours >= 0 && hours < 6) {
 		tP = 'night';
 	}
 	//DAY, 6AM - 5PM
@@ -90,7 +90,7 @@ var initPortal = function($rootScope) {
 	//Update all of the css elements depending on the time of day.
 	var stageElements = [
 		'portal', 'clouds', 'clouds_back', 'ruins', 'foliage_back', 'foliage_front', 'tent',
-		'grass', 'stars'
+		'grass', 'stars', 'fall_decor'
 	];
 
 	for (var i = 0; i < stageElements.length; i++) {
